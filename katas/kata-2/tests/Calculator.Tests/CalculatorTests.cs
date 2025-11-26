@@ -49,6 +49,20 @@ namespace Calculator.Tests
             result.Should().Be(42);
         }
 
+        [Fact]
+        public void Divide_TwoPositiveNumbers_ReturnsQuotient()
+        {
+            // Arrange
+            int a = 20;
+            int b = 4;
+
+            // Act
+            int result = _calculator.Divide(a, b);
+
+            // Assert
+            result.Should().Be(5);
+        }
+
         // TODO: Implementa más tests usando TDD
         // Suggestions:
         // - Test multiply with positive numbers
