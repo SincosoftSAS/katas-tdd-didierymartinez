@@ -4,9 +4,29 @@ namespace FizzBuzz
     {
         public static List<string> Generate(int count)
         {
-            // TODO: Implement FizzBuzz logic using TDD
-            // Start with the simplest case that makes the first test pass
-            throw new NotImplementedException("Implement using TDD: Red → Green → Refactor");
+            var result = new List<string>();
+
+            for (int i = 1; i <= count; i++)
+            {
+                if (i % 3 == 0 && i % 5 == 0)
+                {
+                    result.Add("FizzBuzz");
+                }
+                else if (i % 3 == 0)
+                {
+                    result.Add("Fizz");
+                }
+                else if (i % 5 == 0)
+                {
+                    result.Add("Buzz");
+                }
+                else
+                {
+                    result.Add(i.ToString());
+                }
+            }
+
+            return result;
         }
     }
 }
